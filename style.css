@@ -74,7 +74,7 @@ body {
     content: '';
     width: 22px;
     height: 22px;
-    background-image: url('ic_uncheck.png');
+    background-image: url('images/ic_uncheck.png');
     background-size: cover; /* 이미지 크기 조정 */
     background-repeat: no-repeat;
     display: flex;
@@ -88,7 +88,7 @@ body {
     content: '';
     width: 22px;
     height: 22px;
-    background-image: url('ic_checked.png');
+    background-image: url('images/ic_checked.png');
     background-size: cover; /* 이미지 크기 조정 */
     background-repeat: no-repeat;
     cursor: pointer; /* 포인터 커서 */
@@ -121,13 +121,13 @@ body {
 }
 /* 3개 종류 이모지 버튼 */
 #warningEmoji {
-    background-image: url('img_cation.png'); /* 주의 */
+    background-image: url('images/img_cation.png'); /* 주의 */
 }
 #meetingEmoji {
-    background-image: url('img_meeting.png'); /* 미팅 */
+    background-image: url('images/img_meeting.png'); /* 미팅 */
 }
 #lunchEmoji {
-    background-image: url('img_lunch.png'); /* 런치 */
+    background-image: url('images/img_lunch.png'); /* 런치 */
 }
 
 /* 가장 상단 페이지명 텍스트 박스 스타일 */
