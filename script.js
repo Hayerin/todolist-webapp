@@ -79,8 +79,8 @@ function addTodoList() {
     todoItem.appendChild(label);
     todoItem.appendChild(textSpan);
 
-    // 현재 활성화된 날짜 섹션에 추가
-    currentTodoDateDiv.appendChild(todoItem);
+    // 현재 활성화된 날짜 섹션에 최신순으로 추가
+    currentTodoDateDiv.prepend(todoItem);
 
     // 입력 필드 초기화
     todoInput.value = "";
