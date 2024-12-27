@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 할 일을 뒤로 미루지말자</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src="script.js" defer></script>
+
+<body>
+    <div id="pageTitle">
+        <h1>오늘 할 일을 뒤로 미루지말자</h1>
+        <h2>Made by Rin</h2>
+    </div>
+
+    <!-- 버튼을 누르면 해당 이모지가 텍스트 인풋 가장 앞에 추가되는 기능 -->
+    <div id="emojiGroupDiv">
+        <div id="emojiGroup">
+            <div id="emojiBtnDiv">
+                <button type="button" id="warningEmoji" class="button-style" onclick="addEmoji('⚠️')"></button>            
+            </div> 
+            <p>전달</p>    
+        </div>
+        <div id="emojiGroup">
+            <div id="emojiBtnDiv">
+                <button type="button" id="meetingEmoji" class="button-style" onclick="addEmoji('📺')"></button>            
+            </div> 
+            <p>회의</p>    
+        </div>
+        <div id="emojiGroup">
+            <div id="emojiBtnDiv">
+                <button type="button" id="lunchEmoji" class="button-style" onclick="addEmoji('🍚')"></button>            
+            </div> 
+            <p>밥</p>    
+        </div>
+    </div>
+
+    <!-- 텍스트를 직접 입력해서 날짜와 할 일을 추가하는 기능 -->
+    <div class="addList">
+        <div id="addListGroup">
+            <input type="text" id="myDate" placeholder="언제 해야하는 일인가요?">    
+            <button type="button" id="addButton" onclick="addTodoDate()">추가</button>
+        </div>
+
+        <div id="addListGroup">
+            <input type="text" id="myList" placeholder="무슨 일인가요?">
+            <button type="button" id="addButton" onclick="addTodoList()">추가</button>
+        </div>
+    </div>
+
+    <div id="todoContainer">
+        <!-- 여기에 날짜별 섹션이 생성됩니다 -->
+    </div>
+
+</body>
+</html>

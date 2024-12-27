@@ -1,0 +1,278 @@
+
+/* 레이아웃 스타일 정의 */
+body {
+    font-family: Pretendard, bold;
+    color: #fff;
+    background-color: #222;
+    width: 680px; /* 폭 고정 */
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    padding: 0; /* 기본 여백 제거 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.addList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 16px;
+    margin-bottom: 32px;
+}
+
+/* 날짜 생성 시 텍스트 div 스타일 */
+.todo-date-item {
+    display: flex;
+    width: 680px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 날짜 텍스트 스타일 */
+.date-title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    padding: 8px 0px;
+}
+
+/* 할 일 리스트 아이템 그룹 */
+.todo-list-group {
+    width: 680px;
+    display: flex; /* Flexbox로 정렬 */
+    align-items: flex-start;
+    flex-direction: column; /* item 들을 세로로 정렬 */
+    margin-bottom: 20px;
+}
+
+/* 할 일 리스트 아이템 */
+.todo-list-item {
+    display: flex;
+    padding: 4px 0px;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 날짜와 할 일 간의 그룹핑 컨테이너 */
+#todoContainer {
+    padding: 20px;
+    display: flex;
+    width: 680px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 기본 체크박스 숨기기 */
+.todo-checkbox {
+    display: none;
+}
+
+/* 커스텀 체크박스 - 기본 */
+.todo-checkbox + label {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-image: url('ic_uncheck.png');
+    background-size: cover; /* 이미지 크기 조정 */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* 포인터 커서 */
+}
+
+/* 커스텀 체크박스 - 체크된 상태 */
+.todo-checkbox:checked + label::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-image: url('ic_checked.png');
+    background-size: cover; /* 이미지 크기 조정 */
+    background-repeat: no-repeat;
+    cursor: pointer; /* 포인터 커서 */
+}
+
+/* 체크된 상태에서 텍스트 취소선 */
+.todo-checkbox:checked ~ .todo-text {
+    text-decoration: line-through; /* 취소선 */
+    color: #777777; /* 회색 */
+    transition: color 0.3s ease; /* 부드러운 색상 변화 */
+}
+
+/* 할 일 리스트의 텍스트 스타일 */
+.todo-text {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 이모지 버튼 공통 스타일 */
+.button-style {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    background-position: center; /* 이미지 위치 */
+    background-color: #333;
+    border: none;
+    cursor: pointer; /* 클릭 가능한 포인터 표시 */
+}
+/* 3개 종류 이모지 버튼 */
+#warningEmoji {
+    background-image: url('img_cation.png'); /* 주의 */
+}
+#meetingEmoji {
+    background-image: url('img_meeting.png'); /* 미팅 */
+}
+#lunchEmoji {
+    background-image: url('img_lunch.png'); /* 런치 */
+}
+
+/* 가장 상단 페이지명 텍스트 박스 스타일 */
+#pageTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 16px;
+    margin-bottom: 32px;
+    margin-top: 60px;
+}
+
+/* 이모지 그룹 박스 */
+#emojiGroupDiv {
+    display: flex;
+    height: 98px;
+    align-items: center;
+    gap: 40px;
+    margin: 16px;
+    margin-bottom: 32px;
+}
+
+/* 이모지 + 텍스트 박스 */
+#emojiGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 이모지 버튼 스타일 */
+#emojiBtnDiv {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #333;
+    border: none;
+}
+
+/* 이모지 버튼 스타일 */
+#addListGroup {
+    display: flex;
+    width: 680px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* '추가' 버튼 스타일 */
+#addButton {
+    display: flex;
+    height: 52px;
+    width: 52px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #444;
+    color: #ccc; /* 텍스트 컬러 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* 클릭 가능한 포인터 표시 */
+}
+
+
+/* 텍스트 필드 정의 */
+input {
+    border: none;
+    width: 568px;
+    padding: 0px;
+}
+
+/* 텍스트 입력 시 */
+input[type="text"] {
+    display: flex;
+    width: 590px;
+    height: 52px;
+    align-items: center;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    outline: none;
+    padding-inline: 16px;
+}
+
+/* 포커스 상태 시 */
+input[type="text"]:focus {
+    color: #fff; /* 기본 포커스 효과 제거 */
+    outline: none;
+}
+
+/* 플레이스홀더 */
+input[type="text"]::placeholder {
+    color: #777;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* 텍스트 스타일 정의 */
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    font-size: 42px;
+}
+
+h2{
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+h3{
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h4 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
