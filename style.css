@@ -126,6 +126,7 @@ body {
     display: flex;
     align-items: center;
     align-self: stretch;
+    gap: 16px; /* 버튼 사이 간격 */
 }
 
 /* 편집 버튼 컨테이너 */
@@ -391,4 +392,48 @@ img {
 /* 편집 아이콘 - 체크 상태 */
 #ic_edit.checked {
     background-image: url('images/ic_done.png');
+}
+
+/* 초기화 버튼 컨테이너 */
+#btn_reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 37px;
+    background-color: transparent;
+    border-radius: 34px;
+    border: 1px solid #777;
+    cursor: pointer;
+    padding-inline: 10px;
+}
+
+#btn_reset:hover {
+    background-color: #333;
+}
+
+/* 초기화 아이콘 */
+#ic_reset {
+    width: 22px;
+    height: 22px;
+    background-image: url('images/ic_reset.png');
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 초기화 버튼 */
+#resetButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
